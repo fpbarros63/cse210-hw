@@ -1,5 +1,5 @@
 // Exceeding Requirements:
-// 1) Prompts do not repeat at the same day.
+// 1) Prompts do not repeat on the same day.
 // 2) Each entry stores a mood (1-5) and tags, and saves/loads them from the file.
 
 using System;
