@@ -61,4 +61,19 @@ public class Journal
 
         Console.WriteLine("Journal loaded.");
     }
+
+    public List<string> GetUsedPromptsForDate(string date)
+    {
+        List<string> used = new List<string>();
+
+        foreach (Entry entry in _entries)
+        {
+            if (entry._date == date)
+            {
+                used.Add(entry._promptText);
+            }
+        }
+
+        return used;
+    }
 }

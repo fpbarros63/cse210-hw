@@ -1,5 +1,5 @@
 // Exceeding Requirements:
-// 1) Prompts do not repeat until all prompts have been used.
+// 1) Prompts do not repeat at the same day.
 // 2) Each entry stores a mood (1-5) and tags, and saves/loads them from the file.
 
 using System;
@@ -28,9 +28,12 @@ class Program
 
             if (choice == "1")
             {
-                string prompt = prompts.GetRandomPrompt();
+                string today = DateTime.Now.ToShortDateString();
+                List<string> usedToday = journal.GetUsedPromptsForDate(today);
 
-                if (prompt == "All prompts have already been used.")
+                string prompt = prompts.GetRandomPrompt(usedToday);
+
+                if (prompt == "All prompts for today have already been used.")
                 {
                     Console.WriteLine(prompt);
                 }

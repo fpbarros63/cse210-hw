@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class PromptGenerator
 {
     public List<string> _prompts = new List<string>();
-    private List<string> _usedPrompts = new List<string>();
     private Random _random = new Random();
 
     public PromptGenerator()
@@ -16,23 +15,21 @@ public class PromptGenerator
         _prompts.Add("If I had one thing I could do over today, what would it be?");
     }
 
-    public string GetRandomPrompt()
+    // usedPromptsToday vem do Journal (já inclui o que foi carregado do arquivo)
+    public string GetRandomPrompt(List<string> usedPromptsToday)
     {
-        // Se todos já foram usados, avisa o usuário
-        if (_usedPrompts.Count == _prompts.Count)
+        if (usedPromptsToday.Count == _prompts.Count)
         {
-            return "All prompts have already been used.";
+            return "All prompts for today have already been used.";
         }
 
         string prompt = _prompts[_random.Next(_prompts.Count)];
 
-        // Garante que não repete
-        while (_usedPrompts.Contains(prompt))
+        while (usedPromptsToday.Contains(prompt))
         {
             prompt = _prompts[_random.Next(_prompts.Count)];
         }
 
-        _usedPrompts.Add(prompt);
         return prompt;
     }
 }
