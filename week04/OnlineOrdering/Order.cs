@@ -34,7 +34,7 @@ public class Order
     {
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("PACKING LABEL");
-        sb.AppendLine("--------------------");
+        sb.AppendLine("-----------------------------------");
 
         foreach (Product p in _products)
         {
@@ -48,7 +48,7 @@ public class Order
     {
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("SHIPPING LABEL");
-        sb.AppendLine("--------------------");
+        sb.AppendLine("-----------------------------------");
         sb.AppendLine(_customer.GetName());
         sb.AppendLine(_customer.GetAddress().GetFullAddress());
 
