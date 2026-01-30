@@ -7,8 +7,8 @@ class Program
     {
         // Create videos
         Video video1 = new Video("How to Learn C# Fast", "Code Academy", 540);
-        Video video2 = new Video("OOP Explained Simply", "Dev Simplified", 420);
-        Video video3 = new Video("Clean Code Tips", "Danki Code", 615);
+        Video video2 = new Video("Learn OOP from scratch", "Dev Simplified", 420);
+        Video video3 = new Video("Become a C# expert", "Danki Code", 615);
 
         // Add comments to video1
         video1.AddComment(new Comment("Francisco", "Finally understood constructors. Thanks!"));
