@@ -43,10 +43,3 @@ class Program
         }
     }
 }
-
-/*
-Exceeding Requirements (example ideas you can implement):
-- Prevent repeating prompts/questions until all are used once per session.
-- Add a new activity type (e.g., GratitudeActivity).
-- Save a log file with date/time, activity, duration.
-*/
