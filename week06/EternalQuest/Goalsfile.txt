@@ -1,0 +1,5 @@
+70
+SimpleGoal|Complete the CSE210.001 - Programming with Classes course.|I will be able to complete the CSE210 course by obtaining at least an A-.|100|False
+EternalGoal|Read the scriptures daily.|I will read the Book of Mormon every day as soon as I wake up in the morning.|20
+ChecklistGoal|Running in Jaqueira Park|I will be running in Jaqueira Park on Mondays, Wednesdays, and Fridays in the late afternoon.|50|1|3|10
+SimpleGoal|Finishing the renovation of my house|I will finish the renovation of my house by the end of April 2026.|100|False
